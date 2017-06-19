@@ -37,7 +37,7 @@ if(row == (N-1)){
                       }
 if((row-1) >= 0){
     if(grid[row-1][col] == open)
-           wquf.union(xyTo1D(row, col), xyTo1D(row-1), col);
+           wquf.union(xyTo1D(row, col), xyTo1D(row-1, col));
     }
     if((col+1)<N){
       if(grid[row][col+1]==open)
@@ -102,8 +102,8 @@ private int xyTo1D(int i, int j){
         perco = new Percolation(gridSize);
         
         while(!perco.Percolates()){
-            row = StdRandom.Uniform(perco.getN()) + 1;
-            col = StdRandom.Uniform(perco.getN()) + 1;
+            row = StdRandom.uniform(perco.getN()) + 1;
+            col = StdRandom.uniform(perco.getN()) + 1;
             
             if(perco.isFull(row, col)){
                 perco.open(row, col);
