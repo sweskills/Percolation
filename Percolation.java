@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
@@ -154,17 +155,7 @@ public class Percolation {
 
     }
    
-    public static void  main(String[] args)
-    {
-        Percolation percolation = new Percolation(1);
-        StdOut.println(percolation.percolates());
-        percolation.open(1,1);
-        StdOut.println(percolation.percolates());
-        Percolation percolation2 = new Percolation(2);
-        StdOut.println(percolation2.percolates());
-        percolation2.open(1,1);
-        StdOut.println(percolation2.percolates());
-        percolation2.open(2,1);
-        StdOut.println(percolation2.percolates());
+    public static void  main(String[] args) {
+        
     }
 }

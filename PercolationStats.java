@@ -1,3 +1,4 @@
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
@@ -64,14 +65,8 @@ public class PercolationStats {
        return mean() + (1.96 * stddev() / Math.sqrt(T));
    }
    
-   public static void main(String[] args)
-   {
-       int n = Integer.parseInt(args[0]);
-       int T = Integer.parseInt(args[1]);
-       PercolationStats stats = new PercolationStats(n, T);
-       StdOut.println("mean = "+ stats.mean());
-       StdOut.println("standard deviation = "+ stats.stddev());
-       StdOut.println("95% confidence interval = "+ stats.confidenceLo() + " , " + stats.confidenceHi());
+   public static void main(String[] args) {
+       
    }     
      
 }
